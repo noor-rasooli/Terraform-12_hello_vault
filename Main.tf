@@ -66,5 +66,5 @@ resource "aws_instance" "webserver" {
 # Vault Secret Data Configuration
 data "vault_kv_secret_v2" "Gladiator" {
   mount = "secret"   
-  name  = "test-secret  
+  name  = "test-secret"  
 }

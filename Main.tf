@@ -1,7 +1,7 @@
 # AWS Provider Configuration
 provider "aws" {
-  access_key = "AKIAQUL35WNR7VMCLGVB"
-  secret_key = "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"
+  access_key = "myAccessKey"
+  secret_key = "mySecretKey"
   region     = "us-east-1"  
 }
 
@@ -34,7 +34,7 @@ variable "instance_type" {
 # AWS Instance Resource Configuration
 resource "aws_instance" "webserver" {
   ami           = "ami-0ca77f0088718ec1f"
-  instance_type = var.instance_type[terraform.workspace]  # Use workspace-specific instance type
+  instance_type = var.instance_type[terraform.workspace]  
   key_name      = "TerraformYnov"
   security_groups = ["default"]
 
